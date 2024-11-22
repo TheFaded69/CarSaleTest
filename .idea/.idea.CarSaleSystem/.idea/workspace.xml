@@ -15,35 +15,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecca4c4e-482e-493c-b396-b1da0b86c9d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Common/CarBrand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/DTO/CarSaleForMonthInformationDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/DbService/CarDbService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/DbService/ICarDbService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/DbService/ISaleDbService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/DbService/SaleDbService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/Mapper/MapperCoreConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Database/Models/DbCar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Database/Models/DbOrder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/Mapper/MapperWPFConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/ViewModels/CarSaleForMonthInformationViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/ViewModels/CarSaleForYearInformationViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/Views/MainWindowView.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/Report/Excel/DataTableCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/Report/Excel/ExcelReportCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/Report/IReportCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarSaleSystem.Core/Report/IReportDataCreator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CarSaleSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CarSaleSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Common/CarSaleSystem.Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Common/CarSaleSystem.Common.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarSaleSystem.Core/CarSaleSystem.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Core/CarSaleSystem.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Database/CarSaleSystem.Database.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Database/CarSaleSystem.Database.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Database/DbContext/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Database/DbContext/DataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Database/DbContext/DataContextFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Database/DbContext/DataContextFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Database/DbContext/DbContextFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Database/DbContext/DbContextFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Database/Repository/RepositoryCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Database/Repository/RepositoryCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Database/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Database/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/CarSaleSystem.WPF.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/CarSaleSystem.WPF.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarSaleSystem.Core/DTO/CarSaleForMonthInformationDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.Core/DTO/CarSaleForMonthInformationDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/DependencyContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/DependencyContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/ViewModels/MainWindowViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/Views/MainWindow.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/Views/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/Views/MainWindowView.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/Views/MainWindowView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/Views/MainWindowView.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +36,19 @@
     <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -66,17 +61,21 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24372012c6c94138bf3f496e104366ffc8f918/8c/19ed6e21/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24372012c6c94138bf3f496e104366ffc8f918/de/bb391ebf/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24372012c6c94138bf3f496e104366ffc8f918/e3/fff09b6c/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28776febd6894b88812ea7cd077647852ba8a0/98/7be666a4/DataTable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2cd80647253645ecb011354322cb0e5d16908/46/cc52827c/CallSiteFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2cd80647253645ecb011354322cb0e5d16908/b1/25820df7/ServiceCollectionContainerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3f0ea9a941cd4b7a8d16f1c5e5281755ff08/0a/64daae52/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4fccd10a511b465fb4b3a411343fa69878a0/5e/a8eede2e/IServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5328370899134e348e8a224f9f861644c918/e4/d65b4237/LoggingServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55c7677848044c878981f3c628a8e12eb5910/ec/f8622ee2/MarshalByValueComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605f11b6321242ae9ca4e4da85c81aeb25600/18/6c85516b/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605f11b6321242ae9ca4e4da85c81aeb25600/6a/6c0aed92/Log.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7c05a9f56cce41eba9451cc4a5a099ccc8a0/4c/6f76ea87/ServiceCollectionHostedServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/4b/2ee1fae4/Application.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/87/748466b7/XamlReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9a00b514f1a941dd9f060453de7f7c4043200/87/63955cce/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4461d9775b246b7854886d3ca8044543a03f8/ba/da82f3e5/ExcelPackage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4461d9775b246b7854886d3ca8044543a03f8/fd/04063657/ExcelRangeBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/95cd8cf2ccd2bb650b63829170ed7bc1282533b0e83fa5cacd7bc0626dc6/RelayCommand.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -89,31 +88,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.CarSaleSystem.WPF.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.CarSaleSystem.WPF.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver",
-      "sqlserver.localdb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;,
+      &quot;sqlserver.localdb&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\David\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\David\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\David\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\David\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\David\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\David\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="CarSaleSystem.WPF" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/CarSaleSystem.WPF/CarSaleSystem.WPF/bin/Debug/net8.0-windows/CarSaleSystem.WPF.exe" />
@@ -144,6 +143,8 @@
       <updated>1732202952556</updated>
       <workItem from="1732202952557" duration="11208000" />
       <workItem from="1732214955908" duration="9624000" />
+      <workItem from="1732257855486" duration="111000" />
+      <workItem from="1732289283639" duration="3130000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -153,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732203690601</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Заполнение рандомными данными БД, загрузка из БД, отображение в столбцах">
+      <option name="closed" value="true" />
+      <created>1732257947933</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732257947933</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +184,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Заполнение рандомными данными БД, загрузка из БД, отображение в столбцах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Заполнение рандомными данными БД, загрузка из БД, отображение в столбцах" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

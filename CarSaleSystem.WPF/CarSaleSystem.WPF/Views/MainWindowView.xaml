@@ -39,9 +39,17 @@
                     </Style>
                 </DatePicker.CalendarStyle>
             </DatePicker>
+            <Button Content="Сгенерировать"
+                    Margin="5"
+                    Command="{Binding GenerateRandomDataCommand}" />
+
             <Button Content="Загрузить"
                     Margin="5"
                     Command="{Binding LoadDataCommand}" />
+            
+            <Button Content="Отчет"
+                    Margin="5"
+                    Command="{Binding CreateReportCommand}" />
         </StackPanel>
 
         <DataGrid ItemsSource="{Binding CarSaleForYear}"

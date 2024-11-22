@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using CarSaleSystem.Core.DbService;
+using CarSaleSystem.Core.DTO;
+using CarSaleSystem.Core.Report;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -12,39 +14,35 @@ public partial class MainWindowViewModel : ViewModelBase
 {
     private readonly ISaleDbService _saleDbService;
     private readonly ICarDbService _carDbService;
+    private readonly IReportCreator _reportCreator;
+    private readonly IReportDataCreator _reportDataCreator;
 
-    public MainWindowViewModel(ISaleDbService saleDbService, ICarDbService carDbService)
+    public MainWindowViewModel(ISaleDbService saleDbService, ICarDbService carDbService, IReportCreator reportCreator, IReportDataCreator reportDataCreator)
     {
         _saleDbService = saleDbService;
         _carDbService = carDbService;
+        _reportCreator = reportCreator;
+        _reportDataCreator = reportDataCreator;
     }
 
     [ObservableProperty] private DateTime _startDate = DateTime.Now;
 
     [ObservableProperty] private DateTime _endDate = DateTime.Now;
 
+    private List<CarSaleForMonthInformationDTO> _currentData;
+    
     public ObservableCollection<CarSaleForYearInformationViewModel> CarSaleForYear { get; set; } = [];
 
     [RelayCommand]
     private async void LoadData()
     {
-        /*for (int i = 0; i < 300; i++)
-        {
-            await _carDbService.AddRandomCarAsync();
-        }
-
-        for (int i = 0; i < 10000; i++)
-        {
-            var carId = await _carDbService.GetRandomCarIdAsync();
-
-            await _saleDbService.AddRandomOrder(carId);
-        }*/
+        
 
         CarSaleForYear.Clear();
         
-        var data = await _saleDbService.GetCarSaleForYearInformationAsync(StartDate);
+        _currentData = await _saleDbService.GetCarSaleForYearInformationAsync(StartDate);
 
-        foreach (var carSaleForMonthInformationDto in data)
+        foreach (var carSaleForMonthInformationDto in _currentData)
         {
             if (CarSaleForYear.Any(cs => cs.Brand == carSaleForMonthInformationDto.Brand && cs.Model == carSaleForMonthInformationDto.Model))
             {
@@ -67,6 +65,28 @@ public partial class MainWindowViewModel : ViewModelBase
                 
                 CarSaleForYear.Add(item);
             }
+        }
+    }
+
+    [RelayCommand]
+    private void CreateReport()
+    {
+        _reportCreator.CreateReport(_reportDataCreator.DataTableCreate(_currentData));
+    }
+    
+    [RelayCommand]
+    private async void GenerateRandomData()
+    {
+        for (var i = 0; i < 300; i++)
+        {
+            await _carDbService.AddRandomCarAsync();
+        }
+
+        for (var i = 0; i < 10000; i++)
+        {
+            var carId = await _carDbService.GetRandomCarIdAsync();
+
+            await _saleDbService.AddRandomOrder(carId);
         }
     }
 }

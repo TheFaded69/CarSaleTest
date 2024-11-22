@@ -1,5 +1,7 @@
 ﻿using CarSaleSystem.Core.DbService;
 using CarSaleSystem.Core.Mapper;
+using CarSaleSystem.Core.Report;
+using CarSaleSystem.Core.Report.Excel;
 using CarSaleSystem.Database.DbContext;
 using CarSaleSystem.Database.Models;
 using CarSaleSystem.Database.Repository;
@@ -40,6 +42,8 @@ internal static class DependencyContainer
 
         services.AddTransient<ISaleDbService, SaleDbService>();
         services.AddTransient<ICarDbService, CarDbService>();
+        services.AddTransient<IReportCreator, ExcelReportCreator>();
+        services.AddTransient<IReportDataCreator, DataTableCreator>();
         
         return services.BuildServiceProvider();
     }

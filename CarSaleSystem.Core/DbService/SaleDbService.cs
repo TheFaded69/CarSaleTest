@@ -32,7 +32,7 @@ public class SaleDbService : ISaleDbService
                 .GroupBy(order => new
                 {
                     order.SoldCar.Model,
-                    Month = order.SaleDate.Month,
+                    order.SaleDate.Month,
                     order.SoldCar.Brand
                 }).Select(group => new CarSaleForMonthInformationDTO()
                 {
