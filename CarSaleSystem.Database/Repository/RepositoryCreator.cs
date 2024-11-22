@@ -16,6 +16,6 @@ public class RepositoryCreator<TModelType, TKeyType> : IRepositoryCreator<TModel
     public async Task<Repository<TModelType, TKeyType>> CreateRepositoryAsync()
         => new(await _contextFactory.CreateDbContextAsync());
 
-    public Repository<TModelType, TKeyType> CreateRepository() 
+    public Repository<TModelType, TKeyType> CreateRepository()
         => new(_contextFactory.CreateDbContext());
 }

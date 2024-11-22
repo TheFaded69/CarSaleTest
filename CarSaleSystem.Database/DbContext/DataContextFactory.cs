@@ -12,9 +12,11 @@ public class DataContextFactory : IDesignTimeDbContextFactory<DataContext>
         var builder = new ConfigurationBuilder()
             .SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
             .AddJsonFile("appsettings.json", false, true);
+        
         var config = builder.Build();
+        
         var optionsBuilder = new DbContextOptionsBuilder<DataContext>()
-            .UseSqlServer(config.GetConnectionString("StandCheckBoardConnection"))
+            .UseSqlServer(config.GetConnectionString("Connection"))
             .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
         return new DataContext(optionsBuilder.Options);

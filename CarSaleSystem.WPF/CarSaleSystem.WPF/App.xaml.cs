@@ -19,7 +19,7 @@ public partial class App : Application
                 shared: true)
             .CreateLogger();
 
-        Services = DependencyContainer.ConfigureServices();
+        _serviceProvider = DependencyContainer.ConfigureServices();
     }
 
     /// <summary>
@@ -30,25 +30,19 @@ public partial class App : Application
     /// <summary>
     /// Gets the <see cref="IServiceProvider"/> instance to resolve application services.
     /// </summary>
-    private IServiceProvider Services { get; set; }
+    private IServiceProvider _serviceProvider { get; set; }
 
     /// <summary>Raises the <see cref="E:System.Windows.Application.Startup" /> event.</summary>
     /// <param name="e">A <see cref="T:System.Windows.StartupEventArgs" /> that contains the event data.</param>
     protected override void OnStartup(StartupEventArgs e)
     {
         base.OnStartup(e);
+        var mainWindowView = _serviceProvider.GetRequiredService<MainWindowView>();
+        var mainWindowViewModel = _serviceProvider.GetRequiredService<MainWindowViewModel>();
 
-        var shell = Services.GetService<MainWindow>();
-        var shellViewModel = Services.GetService<MainWindowViewModel>();
-
-        if (shellViewModel is null || shell is null)
-        {
-            return;
-        }
-
-        shell.DataContext = shellViewModel;
-
-        shell.Show();
+        mainWindowView.DataContext = mainWindowViewModel;
+        
+        mainWindowView.Show();
     }
 
     /// <summary>

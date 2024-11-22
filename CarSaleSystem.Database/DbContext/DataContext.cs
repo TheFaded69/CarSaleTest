@@ -1,4 +1,5 @@
-﻿using CarSaleSystem.Database.Models.EntityTypes;
+﻿using CarSaleSystem.Database.Models;
+using CarSaleSystem.Database.Models.EntityTypes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
@@ -8,7 +9,7 @@ public sealed class DataContext : Microsoft.EntityFrameworkCore.DbContext, IData
 {
     public DataContext(DbContextOptions options) : base(options)
     {
-        Database.Migrate();
+        Database.EnsureCreated();
     }
 
     private IDbContextTransaction _transaction;
@@ -89,7 +90,8 @@ public sealed class DataContext : Microsoft.EntityFrameworkCore.DbContext, IData
     /// <param name="modelBuilder">билдер модели</param>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
+        CreateCarTable(modelBuilder);
+        CreateSaleTable(modelBuilder);
     }
 
 
@@ -106,6 +108,44 @@ public sealed class DataContext : Microsoft.EntityFrameworkCore.DbContext, IData
         modelBuilder.Entity<TEntityType>().Property(e => e.Deleted);
     }
 
-    
-    
+    private void CreateCarTable(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<DbCar>().ToTable("Cars");
+        CreateBaseEntity<DbCar, Guid>(modelBuilder);
+        modelBuilder.Entity<DbCar>()
+            .Property(e => e.Brand)
+            .HasMaxLength(15);
+        
+        modelBuilder.Entity<DbCar>()
+            .Property(e => e.Model)
+            .HasMaxLength(15);
+        
+        modelBuilder.Entity<DbCar>()
+            .Property(e => e.YearOfProduction);
+        
+        modelBuilder.Entity<DbCar>()
+            .Property(e => e.Color)
+            .HasMaxLength(15);
+        
+        modelBuilder.Entity<DbCar>()
+            .Property(e => e.Configuration);
+
+        modelBuilder.Entity<DbCar>()
+            .HasMany(e => e.Orders)
+            .WithOne(e => e.SoldCar)
+            .HasForeignKey(e => e.CarId)
+            .OnDelete(DeleteBehavior.Cascade);
+    }
+
+    private void CreateSaleTable(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<DbOrder>().ToTable("Sales");
+        CreateBaseEntity<DbOrder, Guid>(modelBuilder);
+        
+        modelBuilder.Entity<DbOrder>()
+            .Property(e => e.SaleDate);
+        
+        modelBuilder.Entity<DbOrder>()
+            .Property(e => e.PurchasePrice);
+    }
 }

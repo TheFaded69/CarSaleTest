@@ -12,15 +12,17 @@ public class DbContextFactory : IDbContextFactory<DataContext>
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
                 .AddJsonFile("appsettings.json", false, true);
+            
             var config = builder.Build();
+            
             var optionsBuilder = new DbContextOptionsBuilder<DataContext>()
-                .UseSqlServer(config.GetConnectionString("StandCheckBoardConnection"))
+                .UseSqlServer(config.GetConnectionString("Connection"))
                 .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            
             return new DataContext(optionsBuilder.Options);
         }
         catch (Exception e)
         {
-            var message = e.InnerException != null ? e.InnerException.Message : e.Message;
             return null;
         }
     }
